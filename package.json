@@ -1,0 +1,36 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "my first project",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typings": "typings",
+    "tsc:init": "tsc --init",
+    "typingsExpress": "typings install dt~express --global --save",
+    "typingsServe-static": "typings install dt~serve-static --global --save",
+    "typingsExpress-serve-static-core": "typings install dt~express-serve-static-core --global --save",
+    "typingsMime": "typings install dt~mime --global --save",
+    "typingsNode": "typings install dt~node --global --save",
+    "typingsHandlebars": "typings install dt~handlebars --global --save",
+    "typingsExpress-Handlebars": "typings install dt~express-handlebars --global --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/komikk/meadowlark.git"
+  },
+  "author": "Juraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/komikk/meadowlark/issues"
+  },
+  "homepage": "https://github.com/komikk/meadowlark#readme",
+  "devDependencies": {
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
