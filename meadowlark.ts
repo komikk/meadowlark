@@ -14,34 +14,38 @@ app.set("view engine", handlebarsViewEngine);
 
 app.set("port", process.env.PORT || 3000);
 app.use(express.static(__dirname + "/public"));
+app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+    
+
+});
 
 // routes
-app.get("/", (req:express.Request, res:express.Response) => {
+app.get("/", (req: express.Request, res: express.Response) => {
     // res.type("text/plain");
     // res.send("Meadowlark Travel");
     res.render("home.hbs");
 });
 
-app.get("/about", (req:express.Request, res:express.Response) => {
-    let randomeFortune = 
+app.get("/about", (req: express.Request, res: express.Response) => {
+    let randomeFortune =
             fortunes[Math.floor(Math.random() * fortunes.length)];
     res.render("about.hbs", {fortune: randomeFortune});
 });
 
 // catch 404
-app.use((req:express.Request, res:express.Response, next:express.NextFunction) => {    
+app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
     res.status(404);
     res.render("404.hbs");
 });
 // 500 error handler
-app.use((err:any, req:express.Request, res:express.Response, next: express.NextFunction) => {   
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
     res.status(500);
     res.render("500.hbs");
 });
 
 app.listen(app.get("port"), () => {
     console.log("Express started on http://localhost:" + app.get("port"));
-})
+});
 
 let fortunes = [
     "Rivers need spring",

@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "typings": "typings",
     "tsc:init": "tsc --init",
+    "tslint:init": "tslint --init",
+    "linkCheck": "blc http://localhost:3000 -ro",
     "typingsExpress": "typings install dt~express --global --save",
     "typingsServe-static": "typings install dt~serve-static --global --save",
     "typingsExpress-serve-static-core": "typings install dt~express-serve-static-core --global --save",
@@ -26,7 +28,10 @@
   },
   "homepage": "https://github.com/komikk/meadowlark#readme",
   "devDependencies": {
-    "typescript": "^2.0.3",
+    "broken-link-checker": "^0.7.3",
+    "jest": "^16.0.2",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.6",
     "typings": "^1.4.0"
   },
   "dependencies": {
