@@ -1,11 +1,12 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}\\meadowlark.js",
+            "program": "${workspaceRoot}\\meadowlark_cluster.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
